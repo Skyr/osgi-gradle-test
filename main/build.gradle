@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':interface')
+    compile 'com.google.collections:google-collections:1.0'
+    //compile 'org.eclipse.osgi:org.eclipse.osgi:3.7.1'
+    compile 'org.apache.felix:org.apache.felix.framework:5.0.0'
+}

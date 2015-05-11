@@ -1,0 +1,19 @@
+apply plugin: 'osgi'
+
+version = '1.0.0'
+
+jar {
+    manifest {
+        instruction 'Export-Package', 'de.ploing.osgitest.greetingservice'
+        instruction 'Bundle-Activator', 'de.ploing.osgitest.greetingservice.service1.Service1Activator'
+        instruction 'Bundle-ActivationPolicy', 'lazy'
+    }
+}
+
+dependencies {
+    compile project(':interface')
+    //compile 'org.eclipse.osgi:org.eclipse.osgi:3.7.1'
+    //compile 'org.apache.felix:org.apache.felix.scr.annotations:1.9.+'
+    compile 'org.apache.felix:org.apache.felix.framework:5.0.0'
+    //compile 'org.osgi:org.osgi.core:5.0.0'
+}
